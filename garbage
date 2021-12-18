@@ -1,0 +1,12 @@
+order_data = {
+                    "name" : i["name"],
+                    "address" : i["address"],
+                    "seats" : seats,
+                    "datetime" : datetime
+                }
+                old_tickets.append(order_data)
+                customer_data = {
+                    "name" : customer.val()['name'],
+                    "booked_seats" : old_tickets
+                }
+                customer = db.child("users").child(uid).update(customer_data)

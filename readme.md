@@ -48,7 +48,7 @@ https://khana-bluelearn-hackathon.herokuapp.com/
 	When the customer chooses a restaurant , the information regarding the vacancies for the table will be visible, and will be available to reserve.
 	
   ## THINGS TO KEEP IN MIND
-  TO SEARCH FOR A SEAT INPUT SOME FAMOUS CITY , DATE :- 19/12/2021, TIME 1-2PM
+  TO SEARCH FOR A SEAT INPUT SOME FAMOUS CITY , DATE :- 19/12/2021, ANY OF THE GIVEN TIME FROM THE OPTIONS OPTIONS
   
   ## VIDEO
   https://youtu.be/CHa2WNkuMaQ

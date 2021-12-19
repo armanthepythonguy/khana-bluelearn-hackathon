@@ -94,7 +94,7 @@ def register():
                 "booked_seats" : [0,]
             }
             results = db.child("users").child(user['localId']).set(data)
-            return {"auth" : True, "id" : user['localId']}
+            return render_template("search.html", data = {"id" : user['localId'], "name": name})
         except:
             return {"auth" : False, "msg":"Email ID already registered"}
     else:

@@ -20,7 +20,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"> 
           <form action="/loginscreen" method="post" id="loginpage">
-            <input type="hidden" value="{{data.uid}}" name="uid"/>
+            <input type="hidden" value="{{data.id}}" name="uid"/>
           <a onclick="document.getElementById('loginpage').submit();" class="nav-link active" aria-current="page" href="#" style="color: #b81bb8;">&nbsp;&nbsp;&nbsp;&nbsp;Reservation&nbsp;&nbsp;&nbsp;&nbsp;</a>
           </form>
         </li>
@@ -32,7 +32,7 @@
         </li>
         <li class="nav-item">
           <form action="/mybookings" method="post" id="bookingpage">
-            <input type="hidden" value="{{data.uid}}" name="uid"/>
+            <input type="hidden" value="{{data.id}}" name="uid"/>
           <a onclick="document.getElementById('bookingpage').submit();" class="nav-link" href="#" style="color: #8b0b8b;">&nbsp;&nbsp;&nbsp;&nbsp;My Bookings&nbsp;&nbsp;&nbsp;&nbsp;</a>
         </form>
         </li>

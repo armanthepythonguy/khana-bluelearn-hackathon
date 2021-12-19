@@ -169,7 +169,7 @@ def book():
                         "booked_seats" : old_tickets
                     }
                     customer = db.child("users").child(uid).update(customer_data)
-        return {'msg':'success'}
+        return render_template("thank_you_cancel.html",data = {"msg":"Succesfully booked your tickets","uid":uid,"secmsg":"Click the button below to go to the search page"})
 
 #cancel order
 @app.route('/cancel',methods = ['POST'])
@@ -183,6 +183,7 @@ def cancel():
         users = db.child("resto_list").get()
         customer = db.child("users").child(uid).get()
         old_tickets = customer.val()['booked_seats']
+        name = customer.val()['name']
         print(old_tickets)
         for i in users.val():
             if i!=None and i["name"]==resto_name and i["address"] == resto_add:
@@ -205,7 +206,7 @@ def cancel():
                         old_index = old_tickets.index(j)
                         db.child("users").child(uid).child("booked_seats").child(old_index).update(order_data)
                         db.child("resto_list").child(index).update(data)
-                        return {"msg":"success"}
+                        return render_template("thank_you_cancel.html",data = {"msg":"Succesfully cancelled your tickets","uid":uid,"name":name,"secmsg":"Click the button below to go to the my bookings page"})
 
 #mybookings
 @app.route('/mybookings',methods = ['POST'])

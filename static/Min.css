@@ -475,3 +475,26 @@
 .accordion-body{
     color: rgb(65, 28, 65);
 }
+.about{
+    background: linear-gradient(45deg,rgb(124, 0, 173),rgb(124, 124, 16))
+}
+.about h2{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 40px;
+    color: wheat;
+}
+.about.video1{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.about p{
+    margin-left: 15%;
+    padding-right: 50% !important;
+    min-height: 700px;
+    margin-bottom:5% ;
+}
+.about.slide1{
+    padding-left: 10%;
+}

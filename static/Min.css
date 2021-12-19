@@ -1,4 +1,4 @@
-@import url(./fonts.css);
+/*@import url(./fonts.css);
 
 .navbar{
     background-color: rgb(73, 18, 80);
@@ -12,13 +12,23 @@
 .navbar-brand:hover{
     color: saddlebrown;}
 
-.nav-link{
-    color:rgb(149, 126, 161);
+.nav-link a:link{
+    color:#6c0aa1 !important; 
     font-size: 20px;
 }
-.nav-link:hover{
-    color: wheat;
+.nav-link a:visited{
+    color:#6c0aa1 !important; 
+    font-size: 20px;
 }
+.nav-link a:hover{
+    color:#6c0aa1 !important; 
+    font-size: 20px;
+}
+.nav-link a:active{
+    color:#6c0aa1 !important; 
+    font-size: 20px;
+}
+
 .header_area .main-menu .navbar .navbar-brand{
     padding:0 2rem 0 5rem  ;
 }
@@ -86,16 +96,20 @@
   padding: 15% 35%;
 }
 .search-box{
-    background: linear-gradient(195deg,rgb(212, 154, 226),rgb(110, 47, 155));
+    background: pink;
     padding-left: 13%;
     padding-right: 5%;
-    padding-bottom: 17%;
+    padding-bottom: 19%;
     padding-top: 2%;
     height: 10%;
 }
+
 .name-box{
     padding-block: 5%;
-    background: linear-gradient(195deg,rgb(212, 154, 226),rgb(110, 47, 155));
+    background: pink;
+    font-family: 'bsteel';
+    color: black;
+    
 }
 .name{
    text-align: center; 
@@ -103,15 +117,19 @@
 .location-input{
     width: 35%;
     border-radius: 25px;
+    color: #b35b69;
 }
 .seats-input{
     width: 15%;
+    color: #b35b69;
 }
 .date-input{
     width: 15%;
+    color: #b35b69;
 }
 .time-input{
     width: 15%;
+    color: #b35b69;
 }
 .bt-0{
     color:#6b5969;
@@ -163,7 +181,7 @@
 .respage-data{
     text-align: center;
 }
-
+*/
 @import url(./fonts.css);
 
 .navbar{
@@ -227,7 +245,7 @@
 }
 .listres{
     margin: 3%;
-    font-family: "Merriweather";
+    font-family: "robo";
     color: rgb(48, 18, 46);
 }
 .resta{
@@ -239,7 +257,7 @@
     margin: 2rem 0rem;
     cursor: pointer;
     transition:transform .4s ease;
-    font-family: "ele";}
+    font-family: "Merriweather";}
 .ares{
     text-decoration: none;
     color:rgb(19, 16, 10);
@@ -258,13 +276,44 @@
 .resta:hover h1{
     filter: brightness(0.01);
 }
-.input{
-  background-image: url(./img/foodin.jpg);
-  filter: contrast(40%);
-  padding: 15% 35%;
-}
 .input-group{
-  filter: brightness(1.5);
+  filter: contrast(140%);
+}
+.search-box{
+    background: pink;
+    padding-left: 13%;
+    padding-right: 5%;
+    padding-bottom: 19%;
+    padding-top: 2%;
+    height: 10%;
+}
+
+.name-box{
+    padding-block: 5%;
+    background: pink;
+    font-family: 'bsteel';
+    color: black;
+    
+}
+.name{
+   text-align: center; 
+}
+.location-input{
+    width: 35%;
+    border-radius: 25px;
+    color: #b35b69;
+}
+.seats-input{
+    width: 15%;
+    color: #b35b69;
+}
+.date-input{
+    width: 15%;
+    color: #b35b69;
+}
+.time-input{
+    width: 15%;
+    color: #b35b69;
 }
 .bt-0{
     color:#6b5969;
@@ -308,9 +357,17 @@
 .error{
     padding: 20%;
 }
-/*.show1{
+.carousel-box{
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 120px;
+}
+.respage-data{
+    text-align: center;
+}
+.show1{
     background: linear-gradient(33deg,violet,rgb(212, 96, 212));
-}*/
+}
 .listseats{
     font-family: 'robo';
     margin: 2% 0%;
@@ -418,4 +475,3 @@
 .accordion-body{
     color: rgb(65, 28, 65);
 }
-

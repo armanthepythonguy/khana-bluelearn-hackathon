@@ -56,7 +56,8 @@
                 <strong>Address: {{order.address}}</strong><br/>
                 <strong>Date:{{order.datetime}}</strong><br/>
                 <strong>Seat:{{order.seats}}</strong><br/>
-            </div>
+                <strong><input type="number"  class="seats-input" id="seats" name="seats" placeholder="Seats" min="1" required/><button class="btn-sm bg-danger" style="margin: 20px;">Cancel</button></strong><br/>
+            </div
             </div>
         </div>
         {%endfor%}

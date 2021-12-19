@@ -29,6 +29,10 @@ def home():
 def loginpage():
     return render_template("login.html")
 
+@app.route('/aboutpage')
+def aboutpage():
+    return render_template("about.html")
+
 @app.route('/registerpage')
 def registerpage():
     return render_template("registration.html")

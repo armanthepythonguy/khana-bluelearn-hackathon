@@ -221,7 +221,7 @@ def mybookings():
         for k in old_tickets:
             if k!=0 and k!= None:
                 bookings.append(k)
-        return render_template("bookings.html", data = {"value":bookings,"name":name})
+        return render_template("bookings.html", data = {"value":bookings,"name":name,"uid":uid})
 
 #give reviews
 @app.route('/reviews',methods = ['POST'])

@@ -1,6 +1,9 @@
+import datetime
 from os import name
+import json
 from flask import *  
 import pyrebase
+import ast
 config = {
     "apiKey": "AIzaSyCg4U026dC23tr0anVQIB3lyIg_-grc6Ak",
   "authDomain": "hackathon-3dc95.firebaseapp.com",
@@ -17,6 +20,35 @@ auth = firebase.auth()
 db = firebase.database()
 app = Flask(__name__)  
 
+#Home route
+@app.route('/')
+def home():
+    return render_template("onpg.html")
+
+@app.route('/loginpage')
+def loginpage():
+    return render_template("login.html")
+
+@app.route('/registerpage')
+def registerpage():
+    return render_template("registration.html")
+
+@app.route('/searchpage')
+def searchpage():
+    return render_template("search.html")
+
+
+@app.route('/respage',methods = ['POST'])
+def respage():
+    if request.method == 'POST':
+        uid = request.form['uid']
+        data = request.form['data']
+        datatime_book = request.form['datetime_book']
+        seats = request.form['seats']
+        data = ast.literal_eval(data)
+        seats_available = data[datatime_book]
+        return render_template("res.html",data = {"uid":uid,"value":data,"seats":seats_available,"seats_tobook":seats,"datatime_book":datatime_book})
+
 #Login route
 @app.route('/login',methods = ['POST'])  
 def login():  
@@ -25,11 +57,27 @@ def login():
         password = request.form['password']
         try:
             user = auth.sign_in_with_email_and_password(email,password)
-            return {"auth" : True, "id" : user['localId']}
+            customer = db.child("users").child(user['localId']).get()
+            name = customer.val()["name"]
+            return render_template("search.html", data = {"id" : user['localId'], "name": name})
         except:
-            return {"auth" : False}
+            return {"auth" : False, "msg":"Invalid Credentials"}
     else:
         return {"auth":"Something is wrong"}
+
+@app.route('/loginscreen',methods = ['POST'])  
+def loginscreen():  
+    if request.method == 'POST':
+        uid = request.form['uid']
+        try:
+            customer = db.child("users").child(uid).get()
+            name = customer.val()["name"]
+            return render_template("search.html", data = {"id" : uid, "name": name})
+        except:
+            return {"auth" : False, "msg":"Invalid Credentials"}
+    else:
+        return {"auth":"Something is wrong"}
+
 
 #register route
 @app.route('/register',methods = ['POST'])
@@ -48,7 +96,7 @@ def register():
             results = db.child("users").child(user['localId']).set(data)
             return {"auth" : True, "id" : user['localId']}
         except:
-            return {"auth" : False}
+            return {"auth" : False, "msg":"Email ID already registered"}
     else:
         return {"auth":"Something is wrong"}
 
@@ -60,12 +108,15 @@ def search():
         date = request.form['date']
         time = request.form['time']
         place = request.form['place']
+        seats = request.form['seats']
+        uid = request.form['uid']
         available = []
         for i in users.val():
-            if i!=None and i[date+time] > 0 and place.lower() in i['address'].lower():
+            if i!=None and i[date+time] >= int(seats) and place.lower() in i['address'].lower():
                 available.append(i)
-        if(len(available)!=0):      
-            return {"value":available}
+        if(len(available)!=0):     
+            return render_template("list.html", data = {"value":available,"uid" : uid,"datetime_book":date+time,"seats":seats})
+            
         else:
             return {'msg':'No restaurents found'}
 
@@ -164,12 +215,13 @@ def mybookings():
     if request.method == 'POST':
         uid = request.form['uid']
         customer = db.child("users").child(uid).get()
+        name = customer.val()['name']
         old_tickets = customer.val()['booked_seats']
         bookings = []
         for k in old_tickets:
             if k!=0 and k!= None:
                 bookings.append(k)
-        return {"data":bookings}
+        return render_template("bookings.html", data = {"value":bookings,"name":name})
 
 #give reviews
 @app.route('/reviews',methods = ['POST'])

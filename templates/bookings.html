@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/Min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Khana | Bookings</title>
+    <link rel="icon" href="./kcutcut.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href='/searchl' style="font-size: 2rem; letter-spacing: 0.5rem;">KHANA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"> 
+              <form action="/loginscreen" method="post" id="loginpage">
+                <input type="hidden" value="{{data.uid}}" name="uid"/>
+              <a onclick="document.getElementById('loginpage').submit();" class="nav-link active" aria-current="page" href="#" style="color: #b81bb8;">&nbsp;&nbsp;&nbsp;&nbsp;Reservation&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/vlogs" style="color: #8b0b8b;">&nbsp;&nbsp;&nbsp;&nbsp;Vlog&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/abouts" style="color: #8b0b8b;">&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <form action="/mybookings" method="post" id="bookingpage">
+                <input type="hidden" value="{{data.uid}}" name="uid"/>
+              <a onclick="document.getElementById('bookingpage').submit();" class="nav-link" href="#" style="color: #8b0b8b;">&nbsp;&nbsp;&nbsp;&nbsp;My Bookings&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </form>
+            </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div>
+      <h1 class="mybookhead">Hi {{data.name}}, your bookings are :-</h1>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        {%for order in data.value %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                {{order.name}}
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <strong>Name: {{order.name}}.</strong><br/>
+                <strong>Address: {{order.address}}</strong><br/>
+                <strong>Date:{{order.datetime}}</strong><br/>
+                <strong>Seat:{{order.seats}}</strong><br/>
+            </div>
+            </div>
+        </div>
+        {%endfor%}
+          </div>
+      </div>
+      <div>
+        <footer class="foot bg-dark py-3">
+            <p class="foot-talk text-center">Caringly Carafted By Show The Code</p>
+            <p class="foot-talk text-center">Chidam | Arman | Luqmaan | Vishnu</p>
+        </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

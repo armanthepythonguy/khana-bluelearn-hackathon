@@ -1,0 +1,421 @@
+@import url(./fonts.css);
+
+.navbar{
+    background-color: rgb(73, 18, 80);
+}
+.navbar-brand{
+    font-family: "robo";
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: wheat;
+}
+.navbar-brand:hover{
+    color: saddlebrown;}
+
+.nav-link{
+    color:rgb(149, 126, 161);
+    font-size: 20px;
+}
+.nav-link:hover{
+    color: wheat;
+}
+.header_area .main-menu .navbar .navbar-brand{
+    padding:0 2rem 0 5rem  ;
+}
+.header_area.main-menu.navbar.navbar{
+    padding:0rem 20rem ;
+}
+.header_area .main-menu .nav-item .nav-link{
+    padding: 1.7rem;
+    font-family: "Merriweather",cursive;
+    font-weight: 500;
+}
+.foot{
+
+    font-family: "bsteel";
+    color: #94b1be;
+    word-spacing: 0.7vw;
+    letter-spacing: 0.3vw;
+}
+.nav-item{
+    font-family: "Merriweather";
+    font-size: 25px;
+    letter-spacing: 0.5rem;
+    color: violet;
+}
+.lists{
+    background: linear-gradient(195deg,rgb(212, 154, 226),rgb(110, 47, 155));
+}
+.listres{
+    margin: 3%;
+    padding-top: 2%;
+    font-family: "Merriweather";
+    color: rgb(48, 18, 46);
+}
+.resta{
+    display: flex;
+    justify-content: center;
+    border: 3px solid #3d0030;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 2rem 0rem;
+    cursor: pointer;
+    transition:transform .4s ease;
+    font-family: "Merriweather";}
+.ares{
+    text-decoration: none;
+    color:rgb(95, 72, 30);
+}
+.ares:hover{
+    text-decoration: none;
+    color:rgb(39, 31, 17);
+}
+.resta {
+    width: 100%;
+}
+.resta:hover{
+    box-shadow: 10px 5px 20px  black ;
+    transform: scale(1.15);
+}
+.resta:hover h1{
+    filter: brightness(0.01);
+}
+.input{
+    
+  filter: contrast(40%);
+  padding: 15% 35%;
+}
+.search-box{
+    background: linear-gradient(195deg,rgb(212, 154, 226),rgb(110, 47, 155));
+    padding-left: 13%;
+    padding-right: 5%;
+    padding-bottom: 17%;
+    padding-top: 2%;
+    height: 10%;
+}
+.name-box{
+    padding-block: 5%;
+    background: linear-gradient(195deg,rgb(212, 154, 226),rgb(110, 47, 155));
+}
+.name{
+   text-align: center; 
+}
+.location-input{
+    width: 35%;
+    border-radius: 25px;
+}
+.seats-input{
+    width: 15%;
+}
+.date-input{
+    width: 15%;
+}
+.time-input{
+    width: 15%;
+}
+.bt-0{
+    color:#6b5969;
+    font-family: 'roboto';
+    font-weight: bolder;
+    border: rgb(0, 0, 0) solid 2px;}
+
+.bt-1{
+    font-family: 'roboto';
+    font-weight: 900;
+    border: black solid 2px;
+    color:#92738e;
+
+}
+.bt-2{
+    font-family: 'roboto';
+    font-weight: 900;
+    border: black solid 2px;
+    color:#584646;
+    font-size: 11px;
+
+}
+.bt-3{
+    font-family: 'roboto';
+    font-weight: 900;
+    border: black solid 2px;
+    color:#584646;}
+.btn-4{
+      
+    height: 50px;
+    border-color: #96518d ;
+    border: 3px solid #29001f;
+    font-family: "roboto" ;
+    color: #000000;
+    background: rgb(253, 146, 164);
+}
+.btn-4:hover{
+    color: rgb(252, 151, 255);
+    background: black;
+}
+.error{
+    padding: 20%;
+}
+.carousel-box{
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 120px;
+}
+.respage-data{
+    text-align: center;
+}
+
+@import url(./fonts.css);
+
+.navbar{
+    background-color: rgb(73, 18, 80);
+}
+.navbar-brand{
+    font-family: "robo";
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: wheat;
+}
+.navbar-brand:hover{
+    color: saddlebrown;}
+
+.nav-link{
+    color:rgb(149, 126, 161);
+    font-size: 20px;
+}
+.nav-link:hover{
+    color: wheat;
+}
+.header_area .main-menu .navbar .navbar-brand{
+    padding:0 2rem 0 5rem  ;
+}
+.header_area.main-menu.navbar.navbar{
+    padding:0rem 20rem ;
+}
+.header_area .main-menu .nav-item .nav-link{
+    padding: 1.7rem;
+    font-family: "Merriweather",cursive;
+    font-weight: 500;
+}
+.foot{
+
+    font-family: "bsteel";
+    color: #94b1be;
+    word-spacing: 0.7vw;
+    letter-spacing: 0.3vw;
+}
+.nav-item{
+    font-family: "Merriweather";
+    font-size: 25px;
+    letter-spacing: 0.5rem;
+    color: violet;
+}
+.foot{
+
+    font-family: "bsteel";
+    color: #94b1be;
+    word-spacing: 0.7vw;
+    letter-spacing: 0.3vw;
+}
+.nav-item{
+    font-family: "Merriweather";
+    font-size: 25px;
+    letter-spacing: 0.5rem;
+    color: violet;
+}
+.lists{
+    background: linear-gradient(195deg,rgb(212, 154, 226),rgb(240, 218, 255));
+}
+.listres{
+    margin: 3%;
+    font-family: "Merriweather";
+    color: rgb(48, 18, 46);
+}
+.resta{
+    display: flex;
+    justify-content: center;
+    border: 3px solid #3d0030;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 2rem 0rem;
+    cursor: pointer;
+    transition:transform .4s ease;
+    font-family: "ele";}
+.ares{
+    text-decoration: none;
+    color:rgb(19, 16, 10);
+}
+.ares:hover{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+.resta {
+    width: 100%;
+}
+.resta:hover{
+    box-shadow: 10px 5px 20px  black ;
+    transform: scale(1.15);
+}
+.resta:hover h1{
+    filter: brightness(0.01);
+}
+.input{
+  background-image: url(./img/foodin.jpg);
+  filter: contrast(40%);
+  padding: 15% 35%;
+}
+.input-group{
+  filter: brightness(1.5);
+}
+.bt-0{
+    color:#6b5969;
+    font-family: 'roboto';
+    font-weight: bolder;
+    border: rgb(0, 0, 0) solid 2px;}
+
+.bt-1{
+    font-family: 'roboto';
+    font-weight: 900;
+    border: black solid 2px;
+    color:#92738e;
+
+}
+.bt-2{
+    font-family: 'roboto';
+    font-weight: 900;
+    border: black solid 2px;
+    color:#584646;
+    font-size: 11px;
+
+}
+.bt-3{
+    font-family: 'roboto';
+    font-weight: 900;
+    border: black solid 2px;
+    color:#584646;}
+.btn-4{
+      
+    height: 50px;
+    border-color: #96518d ;
+    border: 3px solid #29001f;
+    font-family: "roboto" ;
+    color: #000000;
+    background: rgb(253, 146, 164);
+}
+.btn-4:hover{
+    color: rgb(252, 151, 255);
+    background: black;
+}
+.error{
+    padding: 20%;
+}
+/*.show1{
+    background: linear-gradient(33deg,violet,rgb(212, 96, 212));
+}*/
+.listseats{
+    font-family: 'robo';
+    margin: 2% 0%;
+}
+.podag{
+    display: flex;
+    justify-content: center;
+    border: 3px solid #3d0030;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0rem;
+    cursor: pointer;
+    background: green;
+    transition:transform .4s ease;
+    }
+.podar{
+    display: flex;
+    justify-content: center;
+    border: 3px solid #3d0030;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0rem;
+    cursor: pointer;
+    background: red;
+    transition:transform .4s ease;
+    }
+.podaseat{
+    text-decoration: none;
+    color:rgb(19, 16, 10);
+}
+.podaseat:hover{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+.poda {
+    width: 100%;
+}
+.poda:hover{
+    box-shadow: 10px 5px 20px  black ;
+    transform: scale(1.15);
+}
+.poda:hover h1{
+    filter: brightness(0.01);
+}
+.aisle{
+    text-align: center;
+    font-family: 'roboto';
+    color: grey;
+}
+.proceed{
+    margin: 2% 46%;
+    text-align: center;
+    font-family: 'roboto';
+    color: rgb(1, 54, 1);
+    background: linear-gradient(33deg,rgb(121, 233, 121),rgb(175, 243, 175));
+}
+#carouselExampleFade{
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+.carousel-item{
+    max-height: 600px;
+}
+.cinfo{
+    margin-top: 2%;
+    font-family: 'robo';
+    text-align: center;
+    
+}
+.carousel-item::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    opacity: 0.8;
+}
+.carousel-caption{
+    color: wheat;
+    margin-bottom: 15%;
+}
+.mybookhead{
+    font-family: 'bsteel';
+    margin: 4% 25%;
+    text-align: center;
+    color: #b4868e;
+}
+.accordion{
+    margin: 1% 25%;
+    text-align: center;
+    margin-bottom: 150px;
+}
+.accordion-button{
+    color: #b4868e;
+    font-family: 'roboto';
+    padding-left: 43%;
+    background: linear-gradient(33deg,rgb(250, 206, 214),rgb(247, 243, 243));
+}
+.accordion-button:focus,.accordion-button:active{
+    color: rgb(104, 10, 104);
+}
+.accordion-body{
+    color: rgb(65, 28, 65);
+}
+

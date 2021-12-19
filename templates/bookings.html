@@ -56,7 +56,12 @@
                 <strong>Address: {{order.address}}</strong><br/>
                 <strong>Date:{{order.datetime}}</strong><br/>
                 <strong>Seat:{{order.seats}}</strong><br/>
-                <strong><input type="number"  class="seats-input" id="seats" name="seats" placeholder="Seats" min="1" required/><button class="btn-sm bg-danger" style="margin: 20px;">Cancel</button></strong><br/>
+                <form action="/cancel" method="post">
+                  <input type="hidden" name = "uid" value="{{data.uid}}" />
+                  <input type="hidden" name = "resto_name" value="{{order.name}}" />
+                  <input type="hidden" name = "resto_add" value="{{order.address}}" />
+                  <input type="hidden" name = "datetime" value="{{order.datetime}}" />
+                <strong><input type="number"  class="seats-input" id="seats" name="seats" placeholder="Seats" max="{{order.seats}}" required/><button class="btn-sm bg-danger" style="margin: 20px;">Cancel</button></strong></form><br/>
             </div
             </div>
         </div>

@@ -195,7 +195,7 @@ def cancel():
                 }
                 index = users.val().index(i)
                 for j in old_tickets:
-                    if j!=0 and j!=None and j["name"]==resto_name and j["address"] == resto_add and j['datetime'] == datetime and int(j["seats"]) >= seats:
+                    if j!=0 and j!=None and j["name"]==resto_name and j["address"] == resto_add and j['datetime'] == datetime and int(j["seats"]) >= int(seats):
                         order_data = {
                                         "name" : j["name"],
                                         "address" : j["address"],
@@ -206,8 +206,6 @@ def cancel():
                         db.child("users").child(uid).child("booked_seats").child(old_index).update(order_data)
                         db.child("resto_list").child(index).update(data)
                         return {"msg":"success"}
-                    else:
-                        return {"msg":"Cancelled seats cannot be greater than seats booked"}
 
 #mybookings
 @app.route('/mybookings',methods = ['POST'])

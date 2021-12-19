@@ -169,7 +169,7 @@ def book():
                         "booked_seats" : old_tickets
                     }
                     customer = db.child("users").child(uid).update(customer_data)
-        return render_template("thank_you_cancel.html",data = {"msg":"Succesfully booked your tickets","uid":uid,"secmsg":"Click the button below to go to the search page"})
+        return render_template("thank_you_book.html",data = {"msg":"Succesfully booked your seats","uid":uid,"secmsg":"Click the button below to go to the search page"})
 
 #cancel order
 @app.route('/cancel',methods = ['POST'])

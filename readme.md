@@ -20,6 +20,8 @@ Finally, we deploy the website using Heroku which is a cloud service platform.
 
 
 This is a responsive web application for viewing in both Mobile and Desktop.
+## LINK of the project
+https://khana-bluelearn-hackathon.herokuapp.com/
 ## Features
 
    <ul>
@@ -44,5 +46,9 @@ This is a responsive web application for viewing in both Mobile and Desktop.
   Searching can be done after logining  - the Search box and clicking on the several features of a location,date and time.
 	After selecting the options , the available restaurants at that particular time will be shown.
 	When the customer chooses a restaurant , the information regarding the vacancies for the table will be visible, and will be available to reserve.
+	
+  ## THINGS TO KEEP IN MIND
+  TO SEARCH FOR A SEAT INPUT CITY FROM [KOLKATA,MUMBAI,CHENNAI], DATE :- 19/12/2021, TIME 1-2PM
   
-  ## SCREENSHOTS
+  ## VIDEO
+  https://youtu.be/CHa2WNkuMaQ
